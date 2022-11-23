@@ -17,4 +17,4 @@
 venv/
 
 # jupyter notebook
-test.ipynb
+*.ipynb
