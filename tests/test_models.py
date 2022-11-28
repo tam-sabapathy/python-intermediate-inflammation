@@ -8,7 +8,8 @@ import pytest, pytest_cov
     "test, expected",
     [
         ([[0, 0],[0, 0],[0, 0]], [0,0]),
-        ([[1, 2],[3, 4],[5, 6]], [3,4])
+        ([[1, 2],[3, 4],[5, 6]], [3,4]),
+        ([[0, 0],[0, 0],[0, 0]], [0,0])
     ]
 )
 def test_daily_mean_integers(test, expected):
