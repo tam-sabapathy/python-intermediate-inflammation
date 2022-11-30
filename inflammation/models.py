@@ -11,7 +11,6 @@ and each column represents a single day across all patients.
 
 
 import numpy as np
-
 class Observation:
     def __init__(self, day, value):
         self.day = day 
@@ -20,36 +19,34 @@ class Observation:
     def __str__(self):
         return str(self.value)
 
-
 class Person:
-    
-    def __init__(self, name: str):
+    def __init__(self, name):
         self.name = name
         
-
     def __str__(self):
         return self.name
 
-class Doctor(Person):
+# class Doctor(Person):
     
-    def __init__(self, name):
-        super().__init__(name)
-        self.patients = []
+#     def __init__(self, name):
+#         super().__init__(name)
+#         self.patients = []
 
-    @property
-    def patient_names(self):
-        return [p.name for p in self.patients]    
+#     @property
+#     def patient_names(self):
+#         return [p.name for p in self.patients]    
 
-    def add_patient(self, new_patient):
-        if new_patient not in self.patients:
-            self.patients.append(new_patient)
-
+#     def add_patient(self, new_patient):
+#         if new_patient not in self.patients:
+#             self.patients.append(new_patient)
 
 class Patient(Person):
 
-    def __init__(self, name: str):
+    def __init__(self, name, observations=None):
         super().__init__(name)
         self.observations = []
+        if observations is not None:
+            self.observations = observations
 
     @property
     def last_observation(self):
