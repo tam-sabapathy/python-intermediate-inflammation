@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 # name: CI
 # # Specify which GitHub events will trigger a CI build
 # on: push
@@ -73,4 +72,4 @@ jobs:
         run: |
           pytest tests/test_models.py
         # pytest --cov=inflammation.models tests/test_models.py
->>>>>>> 4dd85b5d82ff12a4a1465683fa2477e72b83243c
+
