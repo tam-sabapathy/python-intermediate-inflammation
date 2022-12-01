@@ -96,6 +96,7 @@ def daily_min(data):
     """Calculate the daily min of a 2D inflammation data array."""
     return np.min(data, axis=0)
 
+<<<<<<< HEAD
 def patient_normalise(data):
     ''''Normalise patient data from 2D array of inflammation data'''
     if np.any(data < 0):
@@ -105,3 +106,10 @@ def patient_normalise(data):
     normalised[np.isnan(normalised)] = 0
     normalised[normalised < 0] = 0
     return normalised
+=======
+
+def patient_normalise(data):
+    '''Normalise patient data from 2D array of inflammation data'''
+    maxes = np.max(data, axis = 0)
+    return data / maxes[:, np.newaxis]
+>>>>>>> 4dd85b5d82ff12a4a1465683fa2477e72b83243c
